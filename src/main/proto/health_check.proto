@@ -1,0 +1,17 @@
+syntax = "proto3";
+package proto;
+
+option java_multiple_files = true;
+option java_package = "generated";
+
+message HealthCheckResponse {
+  string message = 1 ;
+}
+
+message Empty {
+
+}
+
+service healthCheck {
+  rpc hello(Empty) returns (HealthCheckResponse);
+}
